@@ -1,25 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:interactive_story/Quizes/Quiz01/Quiz_01_Q3.dart';
-class Quiz_01_Q2 extends StatefulWidget {
+class Quiz_01_Q3 extends StatefulWidget {
   final score;
-  final Q2;
+  final Q3;
   final A1;
   final A2;
   final A3;
   final A4;
-  const Quiz_01_Q2({Key? key, this.score, this.A1, this.A2, this.A3, this.A4, this.Q2}) : super(key: key);
+  const Quiz_01_Q3({Key? key, this.score, this.A1, this.A2, this.A3, this.A4, this.Q3}) : super(key: key);
 
   @override
-  _Quiz_01_Q2State createState() => _Quiz_01_Q2State();
+  _Quiz_01_Q3State createState() => _Quiz_01_Q3State();
 }
 
-class _Quiz_01_Q2State extends State<Quiz_01_Q2> {
-  String Q3 = "temp question";
-  String A1_Q3 = "temp Ans";
-  String A2_Q3 = "temp Ans";
-  String A3_Q3 = "temp Ans";
-  String A4_Q3 = "temp Ans";
-
+class _Quiz_01_Q3State extends State<Quiz_01_Q3> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,7 +34,7 @@ class _Quiz_01_Q2State extends State<Quiz_01_Q2> {
                   child: Text(widget.A1, style: TextStyle(color: Colors.black, fontSize: 20)),
                   onPressed: () async {
                     await Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => Quiz_01_Q3(score: widget.score,A1: A1_Q3,A2: A2_Q3,A3:A3_Q3,A4: A4_Q3,Q3: Q3,)
+                        builder: (context) => Quiz_01_Q3()
                     ),
                     );
                   },
@@ -53,7 +46,7 @@ class _Quiz_01_Q2State extends State<Quiz_01_Q2> {
                   child: Text(widget.A2, style: TextStyle(color: Colors.black, fontSize: 20)),
                   onPressed: () async {
                     await Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => Quiz_01_Q3(score: widget.score,A1: A1_Q3,A2: A2_Q3,A3:A3_Q3,A4: A4_Q3,Q3: Q3,)
+                        builder: (context) => Quiz_01_Q3()
                     ),
                     );
                   },
@@ -65,7 +58,7 @@ class _Quiz_01_Q2State extends State<Quiz_01_Q2> {
                   child: Text(widget.A3, style: TextStyle(color: Colors.black, fontSize: 20)),
                   onPressed: () async {
                     await Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => Quiz_01_Q3(score: widget.score,A1: A1_Q3,A2: A2_Q3,A3:A3_Q3,A4: A4_Q3,Q3: Q3,)
+                        builder: (context) => Quiz_01_Q3()
                     ),
                     );
                   },
@@ -77,7 +70,7 @@ class _Quiz_01_Q2State extends State<Quiz_01_Q2> {
                   child: Text(widget.A4, style: TextStyle(color: Colors.black, fontSize: 20)),
                   onPressed: () async {
                     await Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => Quiz_01_Q3(score: widget.score+1,A1: A1_Q3,A2: A2_Q3,A3:A3_Q3,A4: A4_Q3,Q3: Q3,)
+                        builder: (context) => Quiz_01_Q3()
                     ),
                     );
                   },
