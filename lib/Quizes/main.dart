@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:interactive_story/Quizes/createAQuiz/Create_A_Quiz.dart';
 
 import 'Quiz01/Quiz_01_Q1.dart';
 
@@ -50,6 +51,18 @@ class _MyHomePageState extends State<MyHomePage> {
                 onPressed: () async {
                   await Navigator.of(context).push(MaterialPageRoute(
                       builder: (context) => Quiz_01_Q1()
+                  ),
+                  );
+                },
+              ),
+              TextButton(
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all<Color>(Colors.red),
+                ),
+                child: Text('Make A Quiz', style: TextStyle(color: Colors.black, fontSize: 20)),
+                onPressed: () async {
+                  await Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => Create_A_Quiz()
                   ),
                   );
                 },
